@@ -28,7 +28,7 @@ class _DriverListScreenState extends State<DriverListScreen> {
         backgroundColor: ColorResources.primaryBlack,
         foregroundColor: Colors.white,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Driver List',
           style: TextStyle(fontSize: 16),
         ),
@@ -48,10 +48,10 @@ class _DriverListScreenState extends State<DriverListScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 21),
           child: Consumer<DriverProvider>(
             builder: (context, value, child) => Column(children: [
-              Gap(10),
+              const Gap(10),
               Row(
                 children: [
-                  Gap(20),
+                  const Gap(20),
                   Text(
                     '${value.driverList.length} Drivers Found',
                     textAlign: TextAlign.start,

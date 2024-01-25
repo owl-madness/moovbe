@@ -10,39 +10,44 @@ class BusSeatWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          border:
-              Border.all(width: 0.3, color: Color.fromRGBO(193, 193, 193, 1))),
-      padding: EdgeInsets.all(38),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.only(bottom: 12.0, top: 8.0, right: 60.0),
-                child: Image.asset(
-                  'assets/images/seat.png',
-                  height: 22,
-                  width: 30,
-                  color: Colors.black,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal:  34.0,vertical: 16.0),
+      child: Container(
+        
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+            border:
+                Border.all(width: 0.3, color: const Color.fromRGBO(193, 193, 193, 1))),
+        padding: const EdgeInsets.all(38),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.only(bottom: 12.0, top: 8.0, right: 30.0),
+                  child: Image.asset(
+                    'assets/images/seat.png',
+                    height: 22,
+                    width: 30,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-            ],
-          ),
-          ListView.builder(
-            itemCount: 9,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              return SeatRowWidget(
-                is2x2Bus: is2x2Bus,
-              );
-            },
-          )
-        ],
+              ],
+            ),
+            ListView.builder(
+              itemCount: 9,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) {
+                return SeatRowWidget(
+                  is2x2Bus: is2x2Bus,
+                );
+              },
+            )
+          ],
+        ),
       ),
     );
   }

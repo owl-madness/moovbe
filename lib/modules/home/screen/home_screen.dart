@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                Gap(21),
+                const Gap(21),
                 Consumer<BusProvider>(
                   builder: (context, busProvider, child) => Column(
                     children: [

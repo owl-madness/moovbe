@@ -17,7 +17,7 @@ class BusDetailsPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           ("${model?.name ?? ''} ${model?.type ?? ''}"),
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         ),
       ),
       body: Center(
@@ -26,11 +26,11 @@ class BusDetailsPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Gap(28),
+              const Gap(28),
               DriverCard(
                   driverName: model?.driverName ?? '',
                   licenseNo: model?.driverLicenseNo ?? ''),
-              BusSeatWidget(is2x2Bus: false),
+              const BusSeatWidget(is2x2Bus: false),
             ],
           ),
         ),
@@ -70,14 +70,14 @@ class DriverCard extends StatelessWidget {
                   children: [
                     Text(
                       driverName,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
                     Text(
                       'License no: $licenseNo',
-                      style: TextStyle(fontSize: 12, color: Colors.white),
+                      style: const TextStyle(fontSize: 12, color: Colors.white),
                     ),
                   ],
                 ),

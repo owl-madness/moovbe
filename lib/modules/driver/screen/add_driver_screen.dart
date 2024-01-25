@@ -20,7 +20,7 @@ class AddDriver extends StatelessWidget {
         backgroundColor: ColorResources.primaryBlack,
         foregroundColor: Colors.white,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Add Driver',
           style: TextStyle(fontSize: 16),
         ),
@@ -36,7 +36,7 @@ class AddDriver extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Gap(39),
+          const Gap(39),
           CustomTextField(
             controller: nameTextController,
             hintText: 'Enter Name',

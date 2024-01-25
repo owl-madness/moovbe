@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: padding ?? EdgeInsets.symmetric(horizontal: 27),
+      padding: padding ?? const EdgeInsets.symmetric(horizontal: 27),
       child: TextButton(
           onPressed: isLoading? null: onPressed,
           child: Container(

@@ -33,7 +33,7 @@ class HomeSwitchWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Gap(7),
+                const Gap(7),
                 Text(
                   cardTitle,
                   style: TextStyle(

@@ -26,13 +26,13 @@ class DriverProvider extends ChangeNotifier {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Are you sure to delete?'),
+        title: const Text('Are you sure to delete?'),
         actions: [
           TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Cancel')),
+              child: const Text('Cancel')),
           TextButton(
             onPressed: () async {
               try {
@@ -53,7 +53,7 @@ class DriverProvider extends ChangeNotifier {
                 notifyListeners();
               }
             },
-            child: Text('Delete'),
+            child: const Text('Delete'),
           )
         ],
       ),

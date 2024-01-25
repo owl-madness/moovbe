@@ -16,13 +16,13 @@ class DriverListTile extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(
-                width: 0.3, color: Color.fromRGBO(193, 193, 193, 1))),
+                width: 0.3, color: const Color.fromRGBO(193, 193, 193, 1))),
         child: Row(
           children: [
             Container(
               height: 73,
               width: 79,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color.fromRGBO(243, 243, 243, 1),
                   ),
               child: Padding(
@@ -33,21 +33,21 @@ class DriverListTile extends StatelessWidget {
                     )),
               ),
             ),
-            Gap(15),
+            const Gap(15),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   data?.name ?? '',
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 12, color: Color.fromRGBO(71, 71, 71, 1)),
                 ),
                 Text('License no: ${data?.licenseNo}',
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 12, color: Color.fromRGBO(71, 71, 71, 1))),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             CustomButton(
                 height: 35,
                 width: 70,
@@ -61,6 +61,5 @@ class DriverListTile extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

@@ -14,7 +14,7 @@ class LoginProvider extends ChangeNotifier {
     notifyListeners();
     if (username.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Username or Password should not be empty')));
+          const SnackBar(content: Text('Username or Password should not be empty')));
       isLoading = false;
       notifyListeners();
     } else {
@@ -32,7 +32,7 @@ class LoginProvider extends ChangeNotifier {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => const HomePage(),
             ));
       }
       } catch (e) {
@@ -49,11 +49,11 @@ class LoginProvider extends ChangeNotifier {
     if (token != null && token.isNotEmpty) {
       getStartedLoading = false;
       notifyListeners();
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => const HomePage()));
     } else {
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('Please Login!')));
+          .showSnackBar(const SnackBar(content: Text('Please Login!')));
       getStartedLoading = false;
       notifyListeners();
     }

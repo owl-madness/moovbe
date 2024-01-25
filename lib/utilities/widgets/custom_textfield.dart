@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:moovbe_bus_booking/utilities/color_resources.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
