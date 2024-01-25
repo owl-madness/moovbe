@@ -1,24 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:moovbe_bus_booking/utilities/color_resources.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, this.hintText, this.controller});
+  const CustomTextField(
+      {super.key, this.hintText, this.controller, this.inputFormatters, this.maxLength});
   final String? hintText;
   final TextEditingController? controller;
+  final int? maxLength;
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: 7,horizontal:25 ),
+      padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
       child: TextFormField(
         controller: controller,
         textAlign: TextAlign.center,
+        maxLength: maxLength,
+        inputFormatters: inputFormatters,
         decoration: InputDecoration(
-          hintText: hintText,
-          border: OutlineInputBorder(borderSide: BorderSide.none,borderRadius: BorderRadius.all(Radius.circular(10))),
-          filled: true,
-          fillColor: Color.fromRGBO(42, 42, 42, 0.1)
-        ),
+            hintText: hintText,
+            border: const OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.all(Radius.circular(10))),
+            filled: true,
+            fillColor: const Color.fromRGBO(42, 42, 42, 0.1)),
       ),
     );
   }
