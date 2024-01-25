@@ -75,12 +75,12 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Gap(30),
-          CustomeTextField(
+          CustomTextField(
             controller: usernameTextController,
             hintText: 'Enter Username',
           ),
           Gap(17),
-          CustomeTextField(
+          CustomTextField(
             controller: passwordTextController,
             hintText: 'Enter Password',
           )

@@ -3,10 +3,9 @@ import 'package:gap/gap.dart';
 import 'package:moovbe_bus_booking/utilities/color_resources.dart';
 import 'package:moovbe_bus_booking/utilities/widgets/custom_button.dart';
 
-class BusListTile extends StatelessWidget {
-  const BusListTile({super.key, required this.onTap, });
-  final void Function() onTap;
-
+class DriverListTile extends StatelessWidget {
+  const DriverListTile({super.key, required this.onTap});
+ final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -55,6 +54,6 @@ class BusListTile extends StatelessWidget {
         ),
       ),
     );
-  
+ ;
   }
 }

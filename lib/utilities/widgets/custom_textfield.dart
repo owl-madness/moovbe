@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:moovbe_bus_booking/utilities/color_resources.dart';
 
-class CustomeTextField extends StatelessWidget {
-  const CustomeTextField({super.key, this.hintText, this.controller});
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({super.key, this.hintText, this.controller});
   final String? hintText;
   final TextEditingController? controller;
 

@@ -48,7 +48,9 @@ class _HomePageState extends State<HomePage> {
                       bgColor: ColorResources.primaryBlack,
                       cardTitle: 'Driver',
                       cardSubTitle: 'Manage your Driver',
-                      assetImagePath: 'assets/images/driver_image.png'),
+                      assetImagePath: 'assets/images/driver_image.png',
+                      onTap: () => value.onDriverPressed(context),
+                      ),
                 ],
               ),
               Gap(21),
@@ -69,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-              )
+              ),
             ],
           ),
         ),

@@ -30,12 +30,12 @@ class CustomButton extends StatelessWidget {
               alignment: Alignment.center,
               height: height ?? 58,
               decoration: BoxDecoration(
-                  color: bgColor ?? Colors.white,
+                  color: bgColor ?? ColorResources.primaryRed,
                   borderRadius: BorderRadius.circular(10)),
               child: Text(
                 buttonText,
                 textAlign: TextAlign.center,
-                style: textStyle?? TextStyle(color: textColor),
+                style: textStyle?? TextStyle(color: textColor?? Colors.white),
                 // style: textStyle ?? buttonTextStyle,
               ))),
     );

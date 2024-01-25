@@ -20,6 +20,7 @@ class GetStarted extends StatelessWidget {
         },
         buttonText: 'Get Started',
         textColor: ColorResources.primaryRed,
+        bgColor:ColorResources.white ,
       ),
       body: Center(
         child: Column(

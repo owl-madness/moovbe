@@ -17,6 +17,7 @@ class _BusDetailsPageState extends State<BusDetailsPage> {
       appBar: AppBar(
         backgroundColor: ColorResources.primaryBlack,
         foregroundColor: Colors.white,
+        centerTitle: true,
         title: Text('KSRTC Swift Scania P-​series',style: TextStyle(fontSize: 16),),
       ),
       body: Center(
