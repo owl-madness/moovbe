@@ -19,6 +19,7 @@ class GetStarted extends StatelessWidget {
               ));
         },
         buttonText: 'Get Started',
+        textColor: ColorResources.primaryRed,
       ),
       body: Center(
         child: Column(

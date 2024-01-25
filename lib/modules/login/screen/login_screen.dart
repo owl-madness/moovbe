@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:moovbe_bus_booking/modules/login/controller/login_provider.dart';
 import 'package:moovbe_bus_booking/utilities/color_resources.dart';
 import 'package:moovbe_bus_booking/utilities/widgets/custom_button.dart';
 import 'package:moovbe_bus_booking/utilities/widgets/custom_textfield.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,12 +14,21 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final usernameTextController = TextEditingController();
+  final passwordTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CustomButton(onPressed: () {
-        
-      }, buttonText: 'Login',bgColor: ColorResources.primaryRed,textStyle: buttonTextStyle.copyWith(color: ColorResources.white)),
+      bottomNavigationBar: Consumer<LoginProvider>(
+        builder: (context, value, child) => CustomButton(
+            onPressed: () => value.checkLogin(
+              context,
+                username: usernameTextController.text.trim(),
+                password: passwordTextController.text.trim()),
+            buttonText: 'Login',
+            bgColor: ColorResources.primaryRed,
+           textColor: ColorResources.white,),
+      ),
       body: Column(
         children: [
           Container(
@@ -65,10 +76,12 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Gap(30),
           CustomeTextField(
+            controller: usernameTextController,
             hintText: 'Enter Username',
           ),
           Gap(17),
           CustomeTextField(
+            controller: passwordTextController,
             hintText: 'Enter Password',
           )
         ],
