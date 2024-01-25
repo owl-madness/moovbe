@@ -29,7 +29,7 @@ class LoginProvider extends ChangeNotifier {
             SharePreferenceHelper.tokenKey, response.accessToken);
         SharePreferenceHelper.setValue(
             SharePreferenceHelper.refreshTokenKey, response.refreshToken);
-        Navigator.push(
+        Navigator.pushReplacement(
             context,
             MaterialPageRoute(
               builder: (context) => const HomePage(),
